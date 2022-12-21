@@ -1,16 +1,12 @@
-package Hotel.ManagementCustomerEntity;
+package com.hotel.domain;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Customer_details")
-public class CustomerEntity {
-    
-        
+public class Customer {
+
     private String customerName;
     private long phoneNumber;
    

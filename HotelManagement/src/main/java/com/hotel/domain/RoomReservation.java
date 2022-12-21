@@ -1,14 +1,11 @@
-package Hotel.ManagementRoomReservation;
+package com.hotel.domain;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Reservation_details")
-public class RoomReservationEntity {
+public class RoomReservation {
 
 	private String Customer;
 	private int roomNo;

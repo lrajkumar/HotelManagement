@@ -1,5 +1,7 @@
-package Hotel.ManagementCustomerEntity;
+package com.hotel.controller;
 
+import com.hotel.domain.Customer;
+import com.hotel.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,16 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/Customer")
 public class CustomerController {
 	
-	@Autowired 
+	@Autowired
 	CustomerService customerser;
 	
 	@PostMapping(value="/addCustomer")
-	public String addCustomer(@RequestBody CustomerEntity c) {
+	public String addCustomer(@RequestBody Customer c) {
 		return customerser.addCustomer(c);
 	}
 	
 	@GetMapping(value="/customerDetails")
-    public CustomerEntity getCustomerDetail(@RequestParam Long phoneNumber){
+    public Customer getCustomerDetail(@RequestParam Long phoneNumber){
 		return customerser.getCustomerDetail(phoneNumber);
 	}
 	

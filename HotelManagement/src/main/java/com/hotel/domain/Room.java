@@ -1,17 +1,13 @@
-package Hotel.ManagementRoomEntity;
-
-import org.hibernate.annotations.GeneratorType;
+package com.hotel.domain;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Room_details")
 
-public class RoomEntity {
+public class Room {
 @Id
 
 	private int roomNo;

@@ -1,12 +1,11 @@
-package Hotel.ManagementRoomReservation;
+package com.hotel.repository;
 
 
+import com.hotel.domain.RoomReservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import Hotel.ManagementRoomEntity.RoomEntity;
+import com.hotel.domain.Room;
 
 @Repository
 public class RoomReservationDao {
@@ -18,13 +17,13 @@ public class RoomReservationDao {
 	RoomReservationRepository roomreservationrepo;
 	
 	
-	public String addRoomReservation(RoomReservationEntity r) {
+	public String addRoomReservation(RoomReservation r) {
 		roomreservationrepo.save(r);
 		return "roomReservation details added";
 	}
 	
 	
-    public RoomEntity getRoomDetail(Integer roomNo){
+    public Room getRoomDetail(Integer roomNo){
 		return roomreservationrepo.findByroomNo(roomNo);
 	}
 }
