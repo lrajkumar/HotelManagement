@@ -1,0 +1,2 @@
+select database() hotelmanagement;
+create table Customer_details (customerName varchar(255),phoneNumber bigint (255));

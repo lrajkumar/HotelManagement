@@ -1,0 +1,2 @@
+select database() hotelmanagement;
+create table Reservation_details (customer varchar(255),roomNo int (255),amountPaid bigint(255));
