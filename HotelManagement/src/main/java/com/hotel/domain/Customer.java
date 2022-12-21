@@ -1,12 +1,10 @@
 package com.hotel.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="Customer_details")
-public class Customer {
-
+public class Customer extends BaseEntity {
     private String customerName;
     private long phoneNumber;
    

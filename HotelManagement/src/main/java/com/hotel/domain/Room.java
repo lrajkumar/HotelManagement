@@ -6,9 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Room_details")
-
-public class Room {
-@Id
+public class Room extends BaseEntity {
 
 	private int roomNo;
 	private int price;

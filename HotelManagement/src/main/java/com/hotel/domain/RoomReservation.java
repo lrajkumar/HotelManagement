@@ -5,7 +5,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Reservation_details")
-public class RoomReservation {
+public class RoomReservation extends BaseEntity {
 
 	private String Customer;
 	private int roomNo;
