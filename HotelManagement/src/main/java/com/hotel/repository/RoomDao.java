@@ -15,18 +15,18 @@ public class RoomDao {
 		 return "room added successfully";
 	}
 	
-    public Room getRoomDetail(Integer roomNo){
-    	return roomrepo.findByroomNo(roomNo);	
+    public Room getRoomDetail(Integer id){
+    	return roomrepo.findById(id).get();	
 	}
 			
    
-    public String updateRoomDetails(@RequestBody Room e)  {
-    	roomrepo.findByroomNo(e);
+    public String updateRoomDetails(Room e)  {
+    	roomrepo.save(e).getId();
     	return "Rooms updated successfully";
     }
    
-    public String deleteRoomDetails(Integer roomNo) {
-			 roomrepo.deleteByroomNo(roomNo);
+    public String deleteRoomDetails(Integer id) {
+			 roomrepo.deleteById(id);
 			 return "RoomDetails detailed Successfully";
 		}
 }

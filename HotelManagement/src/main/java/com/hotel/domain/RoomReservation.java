@@ -1,36 +1,50 @@
 package com.hotel.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Reservation_details")
+@Table(name="reservation_details")
 public class RoomReservation extends BaseEntity {
 
-	private String Customer;
-	private int roomNo;
-	private int amountPaid;
-	public String getCustomer() {
-		return Customer;
-	}
-	public void setCustomer(String customer) {
-		Customer = customer;
-	}
-	public int getRoomNo() {
-		return roomNo;
-	}
-	public void setRoomNo(int roomNo) {
-		this.roomNo = roomNo;
-	}
-	public int getAmountPaid() {
-		return amountPaid;
-	}
-	public void setAmountPaid(int amountPaid) {
-		this.amountPaid = amountPaid;
-	}
+	//private int id;
 	
+	@OneToOne
+	private Customer customer;
 	
+	@ManyToOne
+	private Room room;
 	
+	private int days;
+
+	
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Room getRoom() {
+		return room;
+	}
+
+	public void setRoom(Room room) {
+		this.room = room;
+	}
+
+	public int getDays() {
+		return days;
+	}
+
+	public void setDays(int days) {
+		this.days = days;
+	}
+		
 	
 
 }

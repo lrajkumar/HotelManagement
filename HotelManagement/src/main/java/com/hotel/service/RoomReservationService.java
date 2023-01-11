@@ -21,8 +21,8 @@ public class RoomReservationService {
 	}
 	
 	
-    public Room getRoomDetail(Integer roomNo){
-		return roomreservationdao.getRoomDetail(roomNo);
+    public RoomReservation getRoomReservationDetail(Integer id){
+		return roomreservationdao.getRoomReservationDetail(id);
 	}
 	
 	

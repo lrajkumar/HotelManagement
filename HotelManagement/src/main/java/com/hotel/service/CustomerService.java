@@ -15,8 +15,8 @@ public class CustomerService {
 		return customerdao.addCustomer(c);
 	}
 
-    public Customer getCustomerDetail(Long phoneNumber){
-		return customerdao.getCustomerDetail(phoneNumber);
+    public Customer getCustomerDetail(Integer id){
+		return customerdao.getCustomerDetail(id);
 	
 }
     

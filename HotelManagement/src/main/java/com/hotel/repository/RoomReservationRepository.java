@@ -7,6 +7,6 @@ import com.hotel.domain.Room;
 
 public interface RoomReservationRepository extends JpaRepository<RoomReservation, Integer>{
 
-	Room findByroomNo(Integer roomNo);
+	//Room findByroomNo(Integer roomNo);
 
 }

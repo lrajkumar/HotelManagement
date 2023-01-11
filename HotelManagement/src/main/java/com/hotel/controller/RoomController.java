@@ -5,6 +5,7 @@ import com.hotel.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,19 +25,19 @@ public class RoomController {
 		return roomser.addRoom(e);
 	}
 	
-	@GetMapping(value="/getRoomDetails/{roomNo}")
-    public Room getRoomDetail(@RequestParam Integer roomNo){
-		return roomser.getRoomDetail(roomNo);
+	@GetMapping(value="/getRoomDetails/{id}")
+    public Room getRoomDetail(@PathVariable Integer id){
+		return roomser.getRoomDetail(id);
 	}
 			
-    @PutMapping(value="/updateRoomDetails/{roomNo}")
+    @PutMapping(value="/updateRoomDetails")
     public String updateRoomDetails(@RequestBody Room e)  {
     	return roomser.updateRoomDetails(e);
     }
    
-	@DeleteMapping(value="/deleteRoomDEtails/{roomNo}")
-		public String deleteRoomDetails(@RequestParam Integer roomNo) {
-			return roomser.deleteRoomDetails(roomNo);
+	@DeleteMapping(value="/deleteRoomDetails/{id}")
+		public String deleteRoomDetails(@RequestParam Integer id) {
+			return roomser.deleteRoomDetails(id);
 		}
 	}
 

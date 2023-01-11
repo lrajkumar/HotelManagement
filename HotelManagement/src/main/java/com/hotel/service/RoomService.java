@@ -16,8 +16,8 @@ public class RoomService {
 	}
 	
 
-    public Room getRoomDetail(Integer roomNo){
-		return roomdao.getRoomDetail(roomNo);
+    public Room getRoomDetail(Integer id){
+		return roomdao.getRoomDetail(id);
 	}
 			
    
@@ -25,8 +25,8 @@ public class RoomService {
     	return roomdao.updateRoomDetails(e);
     }
    
-    public String deleteRoomDetails(Integer roomNo) {
-			return roomdao.deleteRoomDetails(roomNo);
+    public String deleteRoomDetails(Integer id) {
+			return roomdao.deleteRoomDetails(id);
 		}
 	
 }

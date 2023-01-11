@@ -1,16 +1,22 @@
 package com.hotel.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Room_details")
+@Table(name="room_details")
 public class Room extends BaseEntity {
 
+	@Column(name = "room_no")
 	private int roomNo;
+	
 	private int price;
+	
+	@Column(name ="room_type")
 	private String roomType;
+	
 	public int getRoomNo() {
 		return roomNo;
 	}

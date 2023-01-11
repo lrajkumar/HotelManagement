@@ -5,13 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoomRepository extends JpaRepository<Room, Integer>{
 
-	Room findByroomNo(Integer roomNo);
+	//Room findByRoomNo(Integer roomNo);
 
-	void findByroomNo(Room e);
+	/*void findByroomNo(Room e);
 
 	
 
-	String deleteByroomNo(Integer roomNo);
+	String deleteByroomNo(Integer roomNo);*/
 	
 
 }

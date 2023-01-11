@@ -23,7 +23,7 @@ public class RoomReservationDao {
 	}
 	
 	
-    public Room getRoomDetail(Integer roomNo){
-		return roomreservationrepo.findByroomNo(roomNo);
+    public RoomReservation getRoomReservationDetail(Integer id){
+		return roomreservationrepo.findById(id).get();
 	}
 }
