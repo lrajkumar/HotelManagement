@@ -1,6 +1,7 @@
 package com.hotel.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -14,7 +15,7 @@ public class RoomReservation extends BaseEntity {
 	@OneToOne
 	private Customer customer;
 	
-	@ManyToOne
+	@OneToOne
 	private Room room;
 	
 	private int days;

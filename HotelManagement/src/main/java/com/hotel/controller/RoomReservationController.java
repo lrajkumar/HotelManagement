@@ -42,6 +42,7 @@ public class RoomReservationController {
 		return roomreservationser.addRoomReservation(reservation);
 	}
 	
+	
 	@GetMapping(value="/getRoomDetails/{id}")
     public RoomReservation getRoomReservationDetail(@PathVariable Integer id){
 		return roomreservationser.getRoomReservationDetail(id);
