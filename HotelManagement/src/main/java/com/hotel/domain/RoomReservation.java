@@ -10,17 +10,13 @@ import jakarta.persistence.Table;
 @Table(name="reservation_details")
 public class RoomReservation extends BaseEntity {
 
-	//private int id;
-	
 	@OneToOne
 	private Customer customer;
 	
 	@OneToOne
 	private Room room;
-	
-	private int days;
 
-	
+	private int days;
 
 	public Customer getCustomer() {
 		return customer;
@@ -45,7 +41,10 @@ public class RoomReservation extends BaseEntity {
 	public void setDays(int days) {
 		this.days = days;
 	}
-		
+
+	public int getTotalPrice() {
+		return (int) ((days * room.getPrice()) * 0.5);
+	}
 	
 
 }

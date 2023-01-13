@@ -1,5 +1,6 @@
 package com.hotel.controller;
 
+import com.hotel.command.RoomReservationCommand;
 import com.hotel.domain.RoomReservation;
 import com.hotel.service.CustomerService;
 import com.hotel.service.RoomReservationService;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hotel.command.RoomReservationCommand;
 import com.hotel.domain.Customer;
 import com.hotel.domain.Room;
 
